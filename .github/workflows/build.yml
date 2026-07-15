@@ -21,10 +21,25 @@ jobs:
       - name: Install bepp globally
         run: npm install -g @bepp/bepp
 
-      - name: Build extension with BEPP
-        run: bepp build
+      - name: Build Chrome extension
+        run: bepp build-chrome --input ./ --id mineradio-bridge
 
-      - name: List build results
+      - name: Build Edge extension
+        run: bepp build-edge --input ./ --id mineradio-bridge
+
+      - name: Build Firefox extension
+        run: bepp build-firefox --input ./ --id mineradio-bridge
+
+      - name: Build Brave extension
+        run: bepp build-brave --input ./ --id mineradio-bridge
+
+      - name: Build Opera extension
+        run: bepp build-opera --input ./ --id mineradio-bridge
+
+      - name: Build Safari extension
+        run: bepp build-safari --input ./ --id mineradio-bridge --app-id com.mineradio.bridge --app-title "Mineradio Bridge"
+
+      - name: List all build results
         run: ls -la build/extensions/
 
       - name: Upload build artifacts
