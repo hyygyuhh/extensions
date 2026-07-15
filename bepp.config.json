@@ -1,6 +1,7 @@
 {
   "shared": {
     "id": "mineradio-bridge",
+    "verbose": true,
     "input": {
       "chromium": "./",
       "chromium-mv2": "./",
@@ -12,8 +13,12 @@
     { "type": "chrome" },
     { "type": "edge" },
     { "type": "firefox" },
-    { "type": "safari" },
     { "type": "brave" },
-    { "type": "opera" }
+    { "type": "opera" },
+    {
+      "type": "safari",
+      "appId": "com.mineradio.bridge",
+      "appTitle": "Mineradio Bridge"
+    }
   ]
 }
