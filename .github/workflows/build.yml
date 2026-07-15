@@ -13,12 +13,16 @@ jobs:
       - name: 🛎 Checkout
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 24
 
+      - name: Install bepp globally
+        run: npm install -g @bepp/bepp
+
       - name: Build extension with BEPP
-        uses: pigeonposse/bepp@v1
+        run: bepp build
 
       - name: View builds
         run: ls -la build/extensions
