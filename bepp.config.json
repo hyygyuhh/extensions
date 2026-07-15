@@ -1,0 +1,21 @@
+{
+  "shared": {
+    "id": "mineradio-bridge",
+    "name": "Mineradio Bridge",
+    "version": "1.4.0",
+    "input": {
+      "chromium": "./",
+      "chromium-mv2": "./",
+      "firefox": "./",
+      "firefox-mv2": "./"
+    }
+  },
+  "build": [
+    { "type": "chrome" },
+    { "type": "edge" },
+    { "type": "firefox" },
+    { "type": "safari" },
+    { "type": "brave" },
+    { "type": "opera" }
+  ]
+}
