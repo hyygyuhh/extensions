@@ -1,7 +1,6 @@
 {
   "shared": {
     "id": "mineradio-bridge",
-    "verbose": true,
     "input": {
       "chromium": "./",
       "chromium-mv2": "./",
