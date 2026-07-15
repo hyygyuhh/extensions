@@ -1,8 +1,6 @@
 {
   "shared": {
     "id": "mineradio-bridge",
-    "name": "Mineradio Bridge",
-    "version": "1.4.0",
     "input": {
       "chromium": "./",
       "chromium-mv2": "./",
