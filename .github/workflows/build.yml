@@ -10,7 +10,7 @@ jobs:
     name: Build extensions with bepp
     runs-on: macos-latest
     steps:
-      - name: 🛎 Checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -18,23 +18,17 @@ jobs:
         with:
           node-version: 24
 
-      - name: Install Xcode Command Line Tools
-        run: xcode-select --install || true
-
       - name: Install bepp globally
         run: npm install -g @bepp/bepp
 
-      - name: Show bepp version
-        run: bepp --version
+      - name: Build extension with BEPP
+        run: bepp build
 
-      - name: Build extension with BEPP (verbose)
-        run: bepp build -v
-
-      - name: List all files in build directory
-        run: find build -type f | head -50
+      - name: List build results
+        run: ls -la build/extensions/
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: extensions-build
-          path: build/
+          path: build/extensions/
