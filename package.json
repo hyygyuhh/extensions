@@ -1,0 +1,6 @@
+{
+  "name": "mineradio-bridge",
+  "version": "1.4.0",
+  "description": "为 Mineradio 网页版提供本地音乐 API 代理",
+  "packageManager": "pnpm@9.0.0"
+}
